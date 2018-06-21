@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view bindtap='chooseAddress' style='margin-top:400rpx;width:100%;text-align:center;'>
+  <text>{{province == ''?'点我选择地区':province + '-' + city + '-' + area}}</text>
+</view>
+
+<nyz_area_picker
+  show="{{show}}"
+  bind:sureSelectArea="sureSelectAreaListener"
+>
+</nyz_area_picker>
+

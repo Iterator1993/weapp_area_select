@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "nyz_area_picker": "../../Component/nyz_area_picker/nyz_area_picker"
+  }
+}

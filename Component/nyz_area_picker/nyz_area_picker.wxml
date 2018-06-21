@@ -1,0 +1,20 @@
+<!--common/nyz_area_picker/nyz_area_picker.wxml-->
+<!--自定义地址选择器-->
+<view class="nyz_area_mask {{maskShow?(show ? 'show':'hide'):'hide'}}"></view>
+<view class="nyz_area_view {{show ? 'show':'hide'}}">
+  <view class="nyz_area_view_btns">
+    <text class="nyz_area_view_btn_cancle" bindtap="handleNYZAreaCancle">取消</text>
+    <text class="nyz_area_view_btn_sure" bindtap="handleNYZAreaSelect" data-province="{{province}}" data-city="{{city}}" data-area="{{area}}">确定</text>
+  </view>
+  <picker-view class="nyz_area_pick_view" indicator-style="height: 35px;" bindchange="handleNYZAreaChange" value="{{value}}">
+    <picker-view-column>
+      <view class="nyz_area_colum_view" wx:for="{{provinces}}">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view class="nyz_area_colum_view" wx:for="{{citys}}">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view class="nyz_area_colum_view" wx:for="{{areas}}">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
